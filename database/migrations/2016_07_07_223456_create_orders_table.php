@@ -20,8 +20,8 @@ class CreateOrdersTable extends Migration
             $table->date('date_out');
             $table->date('due_on');
             $table->date('date_in');
-            $table->foreign('user_id')->on('id')->references('users')->onDelete('cascade');
-            $table->foreign('product_id')->on('id')->references('products')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });
