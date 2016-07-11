@@ -16,15 +16,6 @@ $app->get('/', function () use ($app) {
 });
 
 /**
- * Routes for resource categories-controller
- */
-$app->get('categories-controller', 'CategoriesControllersController@all');
-$app->get('categories-controller/{id}', 'CategoriesControllersController@get');
-$app->post('categories-controller', 'CategoriesControllersController@add');
-$app->put('categories-controller/{id}', 'CategoriesControllersController@put');
-$app->delete('categories-controller/{id}', 'CategoriesControllersController@remove');
-
-/**
  * Routes for resource category
  */
 $app->get('category', 'CategoriesController@all');
